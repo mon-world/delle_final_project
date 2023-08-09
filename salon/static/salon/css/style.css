@@ -1,0 +1,396 @@
+.grid-container {
+  height: 150px;
+  place-items: center;
+}
+
+.grid-container a {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.grid-container a:hover {
+  text-shadow: 0 0 1em rgb(255, 255, 255) ;
+}
+
+.grid-item {
+  margin-top: 7rem;
+}
+
+.btn-light {
+  --bs-btn-color: #181818;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color:#fff;
+  --bs-btn-hover-color: #181818;
+  --bs-btn-hover-bg: #f8f9fad9;
+  --bs-btn-hover-border-color: #f8f9fad9;
+  --bs-btn-active-color: #181818;
+  --bs-btn-active-bg: #f8f9fad9;
+  --bs-btn-active-border-color: #f8f9fad9;
+}
+
+#btn_create {
+  background-color: #B2DFFC;
+  color: white;
+  width: 268px;
+  height: 30px;
+  margin: 8px 40px 8px 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+.items {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  transition: all 0.2s;
+  transform: scale(0.98);
+  will-change: transform;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.items::-webkit-scrollbar {
+  display: none;
+}
+
+.items.active {
+  background: rgba(255, 255, 255, 0.3);
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
+}
+.item {
+  display: inline-block;
+  background: #F1F2ED;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  position: relative;
+  top: 3.5em;
+  left: 5%;    
+}
+.material-symbols-outlined.md-36 { 
+  font-size: 36px; 
+}
+.mus-text {
+  position: relative;
+  top: 5em;
+  left: 8em;
+}
+
+/* external CDN: unpkg flickity.css&js */
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66.59%;
+  height: 300px;
+  background-color: #fff;
+  background-position: center;
+  background-image: url('https://i.pinimg.com/564x/ab/3c/16/ab3c1629b2a97a664cac49b803989e21.jpg');
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: 'Gallery';
+  line-height: 400%;
+  font-size: 70px;
+  color: white;
+}
+
+@media (min-width: 1000px) {
+  .keyword-area {
+    text-indent: 32px;
+  }
+
+  .item {
+    min-height: 300px;
+    min-width: 300px;
+    margin: 2em 1em;
+    border-radius: 2%;
+  }
+  .sample-img {
+    max-height: 300px;
+    max-width: 300px;
+    border-radius: 2%;
+  }
+  figcaption{
+    height: 300px;
+    width: 300px;
+    border-radius: 2%;
+    margin-left: -300px;
+    background-color: rgba(0,0,0,0.7);
+    display: inline-block;
+    position: absolute; /* 이미지와 겹치게 처리 */
+  
+    color: #fff; text-align: center;
+    line-height: 200px;
+  
+    opacity: 0; /* 처음엔 안보이고 */
+  
+    transition: 0.3s;
+  }
+  .mus-text {
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    display: none;
+  
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  .modal-body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  
+    width: 1000px;
+    height: 600px;
+  
+    padding: 40px;
+  
+    text-align: center;
+  
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .modal-items {
+    display: flex;
+  }
+
+  .ori-img {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 500px;
+    margin: 20px;
+    margin-top: 35px;
+  }
+
+  p.test {
+    margin: 1.7rem;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    position: relative;
+    top: 3.5em;
+    left: 5%;    
+  }
+  .material-symbols-outlined.md-36 { 
+    font-size: 36px; 
+  }  
+}
+
+@media (max-width: 500px) {
+  .keyword-area {
+    text-indent: 15px;
+  }
+
+  .item {
+    height: 200px;
+    width: 200px;
+    margin: 1rem 0.5rem;
+    border-radius: 5%;
+  }
+  .sample-img {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 5%;
+  }
+  figcaption{
+    height: 200px;
+    width: 200px;
+    border-radius: 5%;
+    margin-left: -200px;
+    font-size: small;
+    background-color: rgba(0,0,0,0.7);
+    display: inline-block;
+    position: absolute; /* 이미지와 겹치게 처리 */
+  
+    color: #fff; text-align: center;
+    line-height: 200px;
+  
+    opacity: 0; /* 처음엔 안보이고 */
+  
+    transition: 0.3s;
+  }
+ 
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    display: none;
+  
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal.show {
+    display: block;
+  }
+  
+  .modal-body {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+  
+    width: 300px;
+    height: 500px;
+  
+    padding: 40px;
+  
+    text-align: center;
+  
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+  
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .modal-items {
+    display: block;
+  }
+
+  .ori-img {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    margin-top: 40px;
+  }
+
+  p.test {
+    margin: 1rem;
+  }
+
+  .mus-text {
+    width: 100px;
+    top: 3em;
+    left: 5em;
+    padding: 10px;
+    padding-right: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48;
+    position: relative;
+    top: 2.4em;
+    left: 2%;    
+  }
+  .material-symbols-outlined.md-36 { 
+    font-size: 36px; 
+  }
+
+  .grid-container a {
+    font-size: 24px;
+  }
+}
+
+.item:hover figcaption {
+  opacity: 1;
+}
+
+
+a {
+  display: block;
+  text-decoration: none;
+  margin: 1em auto;
+}
+a:hover {
+  cursor: pointer;
+}
+
+p {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+i {
+  color: skyblue;
+}
+
+.fade {
+  animation: fadein 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+  from {opacity: 0}
+  to {opacity: 1}
+}

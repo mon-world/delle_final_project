@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Gallery</title>
+    </head>
+    {% include 'shared/_hp.html' %}
+    <body>
+        <div>
+            <h2>검색 결과 페이지</h2>
+            {% if search_result_list or search_img_list or search_user_list %}
+            {% if search_user_list %}
+            <ul>
+                <h5>검색된 아이디</h5>
+                {% for search_user in search_user_list %}
+                <li>            
+                <p><a href="{% url 'mypage:mypage' search_user.username 'image' %}">{{ search_user.username }}</a></p>
+                </li>
+                {% endfor %}
+            </ul>
+            <hr>
+            {% endif %}
+            {% if search_result_list %}
+            <ul>
+                <h5>검색된 키워드</h5>
+                {% for search_result in search_result_list %}
+                <li>
+                <p>{{ search_result.word }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+            <hr>
+            {% endif %}
+            {% if search_img_set %}
+            <ul>
+                <h5>검색된 그림</h5>
+                {% for search_result in search_img_set %}
+                {% if search_result.kind == 1 %}
+                <li>
+                <p>{{search_result.input_text}}</p>
+                <img src="{{ search_result.thumbnailurl }}"> 
+                {% endif %}
+                </li>
+                {% endfor %} 
+            </ul> 
+            <hr>
+            {% endif %}
+            {% else %}
+            <p>검색 결과가 없습니다.</p>
+            {% endif %}
+        </div>
+    </body>
+</html>
